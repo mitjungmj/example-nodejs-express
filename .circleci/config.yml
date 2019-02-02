@@ -23,10 +23,10 @@ jobs:
           name: "Build docker image and push to docker hub"
           command: |
             cp Dockerfile.production Dockerfile
-            docker build -t mitjungmj/example-nodejs-express:latest .
-            docker build -t mitjungmj/example-nodejs-express:${CIRCLE_SHA1} .
-            docker push mitjungmj/example-nodejs-express:latest
-            docker push mitjungmj/example-nodejs-express:${CIRCLE_SHA1}
+            docker build -t tayakorn/workshopcirclecl:latest .
+            docker build -t tayakorn/workshopcirclecl:${CIRCLE_SHA1} .
+            docker push tayakorn/workshopcirclecl:latest
+            docker push tayakorn/workshopcirclecl:${CIRCLE_SHA1}
 
       - run: echo Done
 
