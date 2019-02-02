@@ -35,8 +35,6 @@ jobs:
                 -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
                 -e CATTLE_URL="$CATTLE_URL" \
                 etlweather/gaucho upgrade 1s13 \
-                --imageUuid 'tayakorn/workshopcirclecl:latest' \
-                --batch_size 3 --start_first \
-                --auto_complete --timeout 600 
+                --imageUuid 'tayakorn/workshopcirclecl:latest' 
       - run: echo Done
 
