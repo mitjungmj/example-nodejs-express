@@ -23,7 +23,7 @@ jobs:
           name: "Build docker image and push to docker hub"
           command: |
             cp Dockerfile.production Dockerfile
-            docker build -t tayakorn/workshopcirclecl:latest .
+            docker build -t tayakorn/workshopcirclecl:latest . #create repository on docker hub
             docker build -t tayakorn/workshopcirclecl:${CIRCLE_SHA1} .
             docker push tayakorn/workshopcirclecl:latest
             docker push tayakorn/workshopcirclecl:${CIRCLE_SHA1}
