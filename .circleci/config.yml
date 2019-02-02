@@ -34,7 +34,7 @@ jobs:
                 -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
                 -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
                 -e CATTLE_URL="$CATTLE_URL" \
-                etlweather/gaucho upgrade $RANGHER_EXZMPLE_NODEJS \
+                etlweather/gaucho upgrade 1s13 \
                 --imageUuid 'tayakorn/workshopcirclecl:latest' \
                 --batch_size 3 --start_first \
                 --auto_complete --timeout 600 \
