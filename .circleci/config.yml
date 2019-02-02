@@ -30,11 +30,11 @@ jobs:
       - run:
           name: "Call to rancher to deploy"
           command: |
-              docker run --rm -it --net=host \
+              docker run --rm -it \
                 -e CATTLE_ACCESS_KEY="$CATTLE_ACCESS_KEY" \
                 -e CATTLE_SECRET_KEY="$CATTLE_SECRET_KEY" \
                 -e CATTLE_URL="$CATTLE_URL" \
                 etlweather/gaucho upgrade 1s13 \
-                --imageUuid 'tayakorn/workshopcirclecl:latest' 
+                --imageUuid 'docker:tayakorn/workshopcirclecl:latest' 
       - run: echo Done
 
